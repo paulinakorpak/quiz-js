@@ -1,0 +1,14 @@
+$primary: #858285;
+$secondary: #272727;
+$success: #C7C1C1;
+$info: green;
+
+$border-radius: 0;
+$border-radius-sm: 0;
+$border-radius-lg: 0;
+$btn-focus-box-shadow: none;
+$form-select-focus-box-shadow: none;
+$input-focus-box-shadow: none;
+
+@import './styles';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';

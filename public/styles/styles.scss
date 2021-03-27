@@ -1,0 +1,62 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+
+  .welcome {
+    width: 100%;
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    img {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .questions {
+    width: 100%;
+    height: 80%;
+
+    .content {
+      width: 100%;
+      margin-top: 6rem;
+
+      .question-list {
+        padding: 1rem;
+
+        li div {
+          margin-top: 2rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .result {
+    width: 100%;
+
+    div h5 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  button:hover {
+    color: white;
+  }
+}
+
+@media (min-width: 768px) {
+  .welcome {
+    max-width: 60%;
+  }
+
+  .questions {
+    max-width: 60%;
+  }
+
+  .result {
+    max-width: 60%;
+  }
+}
