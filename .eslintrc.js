@@ -11,6 +11,8 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'import/prefer-default-export': 'off',
+    'no-shadow': 'off',
+    'no-use-before-define': 'off',
   },
 };
-
