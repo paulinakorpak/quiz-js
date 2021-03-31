@@ -1,5 +1,6 @@
 import { questionsList } from './questions';
 import { Question } from '../Question';
+import { Progress } from '../Progress';
 
 export const Quiz = (element) => {
   const state = {
@@ -57,6 +58,15 @@ export const Quiz = (element) => {
     const question = questions[state.question];
 
     section.innerHTML = question.render();
+    showProgress();
+  };
+
+  const showProgress = () => {
+    const progress = ((state.question + 1) / questionsList.length) * 100;
+    const section = element.querySelector('#questions');
+
+    const progressElement = Progress(progress).render();
+    section.insertAdjacentHTML('afterbegin', progressElement);
   };
 
   const changeButtonText = (text) => {
