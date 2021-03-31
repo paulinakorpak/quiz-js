@@ -51,6 +51,7 @@ export const Quiz = (element) => {
         showNextQuestion();
       } else {
         showSection('result');
+        setResultText();
         showPoints();
         hideButton();
       }
@@ -86,6 +87,19 @@ export const Quiz = (element) => {
 
   const hideButton = () => {
     button.classList.add('d-none');
+  };
+
+  const setResultText = () => {
+    const resultText = element.querySelector('h5');
+    if (state.points <= 3) {
+      resultText.textContent = 'Oj! słabo :(';
+    } else if (state.points <= 5) {
+      resultText.textContent = 'Mogło być lepiej...';
+    } else if (state.points <= 8) {
+      resultText.textContent = 'Dobra robota!';
+    } else if (state.points > 8) {
+      resultText.textContent = 'Świetnie!';
+    }
   };
 
   return { init };
