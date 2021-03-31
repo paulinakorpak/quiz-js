@@ -5,7 +5,7 @@ export const template = (question, options) => `
             ${Object.entries(options).map((option) => `
                 <li class="d-flex">
                     <div>
-                        <input class="radio form-check-input" id="${option[0]}" type="radio" value="${option[0]}" name="option">
+                        <input class="form-check-input" id="${option[0]}" type="radio" value="${option[0]}" name="option">
                     </div>
                     <div>
                         <label class="label form-check-label text-secondary" for="${option[0]}"">${option[1]}</label>

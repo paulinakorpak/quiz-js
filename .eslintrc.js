@@ -15,5 +15,6 @@ module.exports = {
     'no-shadow': 'off',
     'no-use-before-define': 'off',
     'no-plusplus': 'off',
+    'no-param-reassign': ['error', { props: false }],
   },
 };

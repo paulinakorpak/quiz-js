@@ -6,6 +6,7 @@ export const Quiz = (element) => {
   const state = {
     section: null,
     question: null,
+    points: 0,
   };
 
   let button;
@@ -19,6 +20,8 @@ export const Quiz = (element) => {
     button.addEventListener('click', goNext);
   };
 
+  const queryButton = () => element.querySelector('button');
+
   const showSection = (section) => {
     const sections = Array.from(element.querySelectorAll('section'));
     sections.map((element) => element.classList.add('d-none'));
@@ -31,10 +34,12 @@ export const Quiz = (element) => {
 
   const createQuestions = () => questionsList.map((questionItem) => {
     const { question, options, correctOption } = questionItem;
-    return Question(question, options, correctOption);
+    return Question(question, options, correctOption, addPoint);
   });
 
-  const queryButton = () => element.querySelector('button');
+  const addPoint = () => {
+    state.points++;
+  };
 
   const goNext = () => {
     if (state.section === 'welcome') {
@@ -46,6 +51,7 @@ export const Quiz = (element) => {
         showNextQuestion();
       } else {
         showSection('result');
+        showPoints();
         hideButton();
       }
     }
@@ -57,7 +63,7 @@ export const Quiz = (element) => {
     const section = element.querySelector('#questions');
     const question = questions[state.question];
 
-    section.innerHTML = question.render();
+    question.render(section);
     showProgress();
   };
 
@@ -67,6 +73,11 @@ export const Quiz = (element) => {
 
     const progressElement = Progress(progress).render();
     section.insertAdjacentHTML('afterbegin', progressElement);
+  };
+
+  const showPoints = () => {
+    const resultElement = element.querySelector('.points');
+    resultElement.innerHTML = state.points;
   };
 
   const changeButtonText = (text) => {
