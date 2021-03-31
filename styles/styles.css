@@ -1,0 +1,52 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+.app .welcome {
+  width: 100%;
+}
+.app .welcome h1 {
+  margin-bottom: 2rem;
+}
+.app .welcome img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.app .questions {
+  width: 100%;
+  height: 80%;
+}
+.app .questions .content {
+  width: 100%;
+  margin-top: 6rem;
+}
+.app .questions .content .question-list {
+  padding: 1rem;
+}
+.app .questions .content .question-list li div {
+  margin-top: 2rem;
+  margin-right: 1rem;
+}
+.app .result {
+  width: 100%;
+}
+.app .result div h5 {
+  margin-bottom: 2rem;
+}
+.app button:hover {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .welcome {
+    max-width: 60%;
+  }
+
+  .questions {
+    max-width: 60%;
+  }
+
+  .result {
+    max-width: 60%;
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="styles/main.css" rel="stylesheet">
+    <title>Quiz JS</title>
+</head>
+<body>
+    <div class="app container-sm d-flex flex-column justify-content-center align-items-center">
+        <section id="welcome" class="d-none welcome d-flex flex-column align-items-center">
+            <h1 class="text-primary text-uppercase text-center">Madeira Quiz</h1>
+            <img class="img-fluid img-thumbnail" src="img/madeira.jpg" height="853" width="1280" alt="madeira">
+        </section>
+
+        <section id="questions" class="d-none questions d-flex flex-column"></section>
+
+        <section id="result" class="result d-none d-flex flex-column justify-content-between">
+            <div class="alert alert-success">
+                <h5 class="alert-heading text-center text-primary"></h5>
+                <hr>
+                <h4 class="text-center text-uppercase text-secondary">Twój wynik to:
+                    <span class="points fw-bold"></span> punktów
+                </h4>
+            </div>
+        </section>
+
+        <button class="btn btn-outline-success btn-lg text-uppercase">Start</button>
+    </div>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script type="module" src="dist/index.js"></script>
+
+</body></html>
